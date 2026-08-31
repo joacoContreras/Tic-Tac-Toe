@@ -20,16 +20,9 @@ const gameboard = (() => {
     return { add, getState};
 })();
 
-function createPlayer(name, record) {
-    const {} = createPlayer(name);
-
-    const getRecord = () => record;
-    const increaseRecord = () => { record++; };
-    return {
-        name,
-        getRecord,
-        increaseRecord,
-    };
+function Player(name, marker) {
+    this.name = name;
+    this.marker = marker;
 }
 
 const gameController = (() => {
