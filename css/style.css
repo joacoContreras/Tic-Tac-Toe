@@ -24,7 +24,18 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 /* 4. Elementos multimedia e imágenes responsivas */
@@ -94,16 +105,17 @@ button {
 
 :root {
   --primary-color: #2f0271ae;
-  --secondary-color: #DDD6FE;
-  --tertiary-color: #F0F9FF;
-  --neutral-color: #F8FAFC;
+  --secondary-color: #ddd6fe;
+  --tertiary-color: #f0f9ff;
+  --neutral-color: #f8fafc;
 }
 
 body {
   min-height: 100dvh;
   width: 100%;
 
-  background: radial-gradient(circle at 15% 15%, #f4f0ff 0%, transparent 40%),
+  background:
+    radial-gradient(circle at 15% 15%, #f4f0ff 0%, transparent 40%),
     radial-gradient(circle at 85% 85%, #ede4ff 0%, transparent 45%),
     linear-gradient(135deg, #ffffff 0%, #f9f7fd 50%, #f1ebfa 100%);
   background-attachment: fixed;
@@ -119,17 +131,16 @@ body {
   justify-content: space-between;
 }
 
-.header-icon, .btn-icon {
+.header-icon,
+.btn-icon {
   width: 24px;
   height: 24px;
-  filter:
-    drop-shadow(1px 0px 0px currentColor)
-        drop-shadow(-1px 0px 0px currentColor)
-        drop-shadow(0px 1px 0px currentColor)
-        drop-shadow(0px -1px 0px currentColor);
-    
-  filter: brightness(0) saturate(100%) invert(20%) sepia(34%)
-    saturate(3440%) hue-rotate(246deg) brightness(75%) contrast(134%);
+  filter: drop-shadow(1px 0px 0px currentColor)
+    drop-shadow(-1px 0px 0px currentColor) drop-shadow(0px 1px 0px currentColor)
+    drop-shadow(0px -1px 0px currentColor);
+
+  filter: brightness(0) saturate(100%) invert(20%) sepia(34%) saturate(3440%)
+    hue-rotate(246deg) brightness(75%) contrast(134%);
 }
 
 .header {
@@ -186,8 +197,9 @@ body {
   border: 1px solid rgba(221, 214, 254, 0.6);
   border-radius: 20px;
   padding: 32px 28px;
-  box-shadow: 0 10px 25px -5px rgba(47, 2, 113, 0.08),
-              0 8px 10px -6px rgba(47, 2, 113, 0.04);
+  box-shadow:
+    0 10px 25px -5px rgba(47, 2, 113, 0.08),
+    0 8px 10px -6px rgba(47, 2, 113, 0.04);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -228,42 +240,45 @@ body {
   background-color: #faf5ff;
 }
 
-/* Botón de inicio / envío */                                                                                                                                           
-    #start-btn {                                                                                                                                                            
-      margin-top: 8px;                                                                                                                                                      
-      display: inline-flex;                                                                                                                                                 
-      align-items: center;                                                                                                                                                  
-      justify-content: center;                                                                                                                                              
-      gap: 10px;                                                                                                                                                            
-      padding: 14px 24px;                                                                                                                                                   
-      background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);                                                                                                        
-      color: #ffffff;                                                                                                                                                       
-      font-weight: 600;                                                                                                                                                     
-      font-size: 1rem;                                                                                                                                                      
-      border-radius: 12px;                                                                                                                                                  
-      box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);                                                                                                                      
-      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;                                                                                           
-    }                                                                                                                                                                       
-                                                                                                                                                                            
-    #start-btn:hover {                                                                                                                                                      
-      transform: translateY(-2px);                                                                                                                                          
-      box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45);                                                                                                                      
-      filter: brightness(1.05);                                                                                                                                             
-    }                                                                                                                                                                       
-                                                                                                                                                                            
-    #start-btn:active {                                                                                                                                                     
-      transform: translateY(0);                                                                                                                                             
-      box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);                                                                                                                        
-    }                                                                                                                                                                       
-                                                                                                                                                                            
-    /* Ajuste del icono dentro del botón para que se vea blanco */                                                                                                          
-    #start-btn .btn-icon {                                                                                                                                                  
-      width: 18px;                                                                                                                                                          
-      height: 18px;                                                                                                                                                         
-      filter: brightness(0) invert(1);                                                                                                                                      
-      transition: transform 0.2s ease;                                                                                                                                      
-    }                                                                                                                                                                       
-                                                                                                                                                                            
-    #start-btn:hover .btn-icon {                                                                                                                                            
-      transform: translateX(3px);                                                                                                                                           
-    }
+/* Botón de inicio / envío */
+#start-btn {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+#start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45);
+  filter: brightness(1.05);
+}
+
+#start-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
+}
+
+/* Ajuste del icono dentro del botón para que se vea blanco */
+#start-btn .btn-icon {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+
+#start-btn:hover .btn-icon {
+  transform: translateX(3px);
+}
