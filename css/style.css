@@ -282,3 +282,36 @@ body {
 #start-btn:hover .btn-icon {
   transform: translateX(3px);
 }
+
+.hidden {
+  display: none !important;
+}
+
+.game-container {
+  display: flex;
+  flex-diction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.game-status {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #3b0764;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px;)
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+}
+
+.cell {
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid #ddd6fe;
+  border-radius: 12px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #7c3aed;
+}
