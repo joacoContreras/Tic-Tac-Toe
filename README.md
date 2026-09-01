@@ -6,7 +6,7 @@ Un juego clásico de **Tres en Línea (Tic Tac Toe)** interactivo para la web, d
 
 ## 📸 Captura de Pantalla
 
-![Tic Tac Toe UI Preview](img/preview.jpg)
+![Tic Tac Toe UI Preview](img/preview.png)
 
 ---
 
