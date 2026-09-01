@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link src="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <title>Tic Tac Toe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
 </head>
 <body>
     <div class="container">
 
-        <div class="header"></div>
+        <div class="header">
+            <h1>Tic Tac Toe!</h1>
+            <div >
+                <img src="img/config.svg" class="header-icon" alt="">
+                <img src="img/help1.svg" class="header-icon" alt="">
+            </div>
+        </div>
 
         <div class="content">
             <form action="/submit" method="post" class="start-form">
@@ -23,13 +35,20 @@
                 </div>
                 <button type="submit" id="start-btn">
                     <span>New Game</span>
-                    <img src="/img/next-right-arrow.svg" alt="" class="btn-icon">
+                    <img src="img/next-right-arrow.svg" alt="" class="btn-icon">
                 </button>
             </form>
 
         </div>
 
-        <div class="footer"></div>
+        <div class="footer">
+            <div class="link-container">
+                <a>Privacy</a>
+                <a>Terms</a>
+                <a>Support</a>
+            </div>
+            <a class="copyright">©2026 Tic Tac Toe, Joaquin Contreras</a>
+        </div>
     </div>
     <script src="js/main.js"></script>
 </body>
