@@ -43,7 +43,7 @@ const gameController = (() => {
         isGameOver = null;
         winner = null;
         gameboard.reset();
-        console.log('${player[activePlayerIndex].getName()} starts...!');
+        console.log(`${players[activePlayerIndex].getName()} starts...!`);
     };
 
     const getActivePlayer = () => players[activePlayerIndex];
@@ -57,7 +57,7 @@ const gameController = (() => {
     const checkWin = (board) => {
             const winConditions = [
                 [0, 1, 2], [3, 4, 5], [6, 7, 8],
-                [1, 3, 6], [1, 4, 7], [2, 5, 8],
+                [0, 3, 6], [1, 4, 7], [2, 5, 8],
                 [0, 4, 8], [2, 4, 6]
             ];
         return winConditions.some(([a, b, c]) => {
@@ -86,7 +86,7 @@ const gameController = (() => {
         }
 
         switchPlayerTurn();
-        console.log('${getActivePlayer().getName()} turn!');
+        console.log(`${getActivePlayer().getName()} turn!`);
     };
 
     return { startGame, playRound, getActivePlayer, isOver, getWinner };
@@ -114,10 +114,10 @@ const displayController = (() => {
             if (winner === 'tie') {
                 statusElement.textContent = "It's a tie!"
             } else {
-                statusElement.textContent = '${winner.getName()} wins the game!';
+                statusElement.textContent = `${winner.getName()} wins the game!`;
             }
         } else {
-            statusElement.textContent = 'Its ${activePlayer.getName()} (${activePlayer.getMarker()}) turn!';
+            statusElement.textContent = `Its ${activePlayer.getName()} (${activePlayer.getMarker()}) turn!`;
         }
 
         boardState.forEach((marker, index) => {
@@ -172,22 +172,4 @@ gameStartForm.addEventListener('submit', (e) => {
 
     gameController.startGame(player1, player2);
     displayController.showGame();
-});
-
-// ==========================================================================
-// DOM Rendering
-// ==========================================================================
-gameStartForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const name1 = document.querySelector('#player1').value;
-    const name2 = document.querySelector('#player2').value;
-
-    const player1 = createPlayer(name1, "X");
-    const player2 = createPlayer(name2, "O");
-
-    gameStartForm.reset();
-    FormData.style.display = 'none';
-
-    console.log('Starting game... ${player1.getName()} vs ${player2.getName()}');
 });

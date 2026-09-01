@@ -208,7 +208,7 @@ body {
 .start-form > div {
   display: flex;
   flex-direction: column;
-  gap: 8xp;
+  gap: 8px;
 }
 
 .start-form label {
@@ -289,7 +289,7 @@ body {
 
 .game-container {
   display: flex;
-  flex-diction: column;
+  flex-direction: column;
   align-items: center;
   gap: 20px;
 }
@@ -301,8 +301,10 @@ body {
 }
 
 .board {
+  min-height: 300px;
+  min-width: 300px;
   display: grid;
-  grid-template-columns: repeat(3, 100px;)
+  grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, 100px);
   gap: 10px;
 }
