@@ -8,21 +8,27 @@
 </head>
 <body>
     <div class="container">
+
         <div class="header"></div>
+
         <div class="content">
-            <form action="/submit" method="post">
-                <label for="Player X">Name</label>
-                <input type="text" id="player-x-name" name="name">
-
-                <label for="Player O">Name</label>
-                <input type="text" id="player-o-name" name="name">
-
+            <form action="/submit" method="post" class="start-form">
+                <div>
+                    <label for="player1">Player 1 (X):</label>
+                    <input type="text" id="player1" name="player1" required maxlength="20">
+                </div>
+                <div>
+                    <label for="player2">Player 2 (O):</label>
+                    <input type="text" id="player2" name="name" maxlength="20">
+                </div>
                 <button type="submit" id="start-btn">
                     <span>New Game</span>
                     <img src="/img/next-right-arrow.svg" alt="" class="btn-icon">
                 </button>
             </form>
+
         </div>
+
         <div class="footer"></div>
     </div>
     <script src="js/main.js"></script>
